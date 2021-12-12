@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "2ea6af3c-73b8-4b51-b968-e6e8280281fe",
+		"name": "Profile Match",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"type\":\"Admin\",\n\t\"email\":\"pratap2@gmail.in\",\n\t\"password\":\"gagag\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register-Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"type\":\"User\",\n\t\"email\":\"pratap@gmail.in\",\n\t\"password\":\"gagag\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "98"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"62-hEX9ARSgw7G+yMEMSYr8EnTnEeY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 11 Dec 2021 22:06:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"index\": 0,\n        \"code\": 11000,\n        \"keyPattern\": {\n            \"email\": 1\n        },\n        \"keyValue\": {\n            \"email\": \"pratap@gmail.in\"\n        }\n    }\n}"
+				},
+				{
+					"name": "Register-succsess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"type\":\"User\",\n\t\"email\":\"pratap1@gmail.in\",\n\t\"password\":\"gagag\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-rBoYINZavIygrkfPIvGOhdlksAM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 11 Dec 2021 22:07:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Success\": true,\n    \"authToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiVXNlciIsImVtYWlsIjoicHJhdGFwMUBnbWFpbC5pbiIsImlhdCI6MTYzOTI2MDQ0Mn0.YGa8Ge27_ZFD8slha928p73C83XPBTytMJvrienzxps\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"type\":\"Admin\",\n\t\"email\":\"pratap2@gmail.in\",\n\t\"password\":\"gagag\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"type\":\"User\",\n\t\"email\":\"pratap1@gmail.in\",\n\t\"password\":\"gagag\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-9Bx1fWYhZP7AdqVcucFmrp2Dcq4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 11 Dec 2021 22:08:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Success\": true,\n    \"authToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiVXNlciIsImVtYWlsIjoicHJhdGFwMUBnbWFpbC5pbiIsImlhdCI6MTYzOTI2MDUzNX0.FAga2JDqEUsof0P4sInFys1uD4IQI85DXyRc4RTqBEM\"\n}"
+				}
+			]
+		},
+		{
+			"name": "CreateJob",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiQWRtaW4iLCJlbWFpbCI6InByYXRhcDJAZ21haWwuaW4iLCJpYXQiOjE2MzkyNjA1NjB9.PfGzu4Q1ulEcHR8ipjWhLHcmx5dlsl7Wh0hRDdsua44",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"Senreysa\",\n    \"description\": \"Description\",\n    \"depertment\": \"IT\",\n    \"skillset\":\"Eng,JAVA, PHP, PYTHON\",\n    \"musthave\":\"C++,JAVA\",\n    \"recruter\":\"Annon\",\n    \"status\":\"OPEN\",\n    \"expire\":\"11/12/2021\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/createJob",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"createJob"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreateJob Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiQWRtaW4iLCJlbWFpbCI6InByYXRhcDJAZ21haWwuaW4iLCJpYXQiOjE2MzkyNjA1NjB9.PfGzu4Q1ulEcHR8ipjWhLHcmx5dlsl7Wh0hRDdsua44",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Senreysa\",\n    \"description\": \"Description\",\n    \"depertment\": \"IT\",\n    \"skillset\":\"Eng,JAVA, PHP, PYTHON\",\n    \"musthave\":\"C++,JAVA\",\n    \"recruter\":\"Annon\",\n    \"status\":\"OPEN\",\n    \"expire\":\"11/12/2021\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/createJob",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"createJob"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-SxALXc0mqZck+EHRAP6fkQ9OCsg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 11 Dec 2021 22:13:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Success\": true,\n    \"Created\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Candidate Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiVXNlciIsImVtYWlsIjoicHJhdGFwQGdtYWlsLmluIiwiaWF0IjoxNjM5MjU4MTM5fQ.Q6l8EKEB9a5HzeO6G3t6JMrfQhvTobcAdM1ZW1F5Oyg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"pratap1@gmail.in\",\n    \"skill\":\"c++,java,js,php,python\",\n    \"musthaveSkill\":\"eng,java,php\",\n    \"resume\":{\n        \"details\":{\n            \"course\":\"btech\",\n            \"dept\":\"cse\",\n            \"certification\":\"aws\"\n        }\n    }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/candidateProfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"candidateProfile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Candidate ProfileSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiVXNlciIsImVtYWlsIjoicHJhdGFwQGdtYWlsLmluIiwiaWF0IjoxNjM5MjU4MTM5fQ.Q6l8EKEB9a5HzeO6G3t6JMrfQhvTobcAdM1ZW1F5Oyg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"pratap1@gmail.in\",\n    \"skill\":\"c++,java,js,php,python\",\n    \"musthaveSkill\":\"eng,java,php\",\n    \"resume\":{\n        \"details\":{\n            \"course\":\"btech\",\n            \"dept\":\"cse\",\n            \"certification\":\"aws\"\n        }\n    }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/candidateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"candidateProfile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-SxALXc0mqZck+EHRAP6fkQ9OCsg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 11 Dec 2021 22:15:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Success\": true,\n    \"Created\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "GetPrefferd Job",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiVXNlciIsImVtYWlsIjoicHJhdGFwQGdtYWlsLmluIiwiaWF0IjoxNjM5MjU4MTM5fQ.Q6l8EKEB9a5HzeO6G3t6JMrfQhvTobcAdM1ZW1F5Oyg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/getjobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"getjobs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiVXNlciIsImVtYWlsIjoicHJhdGFwQGdtYWlsLmluIiwiaWF0IjoxNjM5MjU4MTM5fQ.Q6l8EKEB9a5HzeO6G3t6JMrfQhvTobcAdM1ZW1F5Oyg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/getjobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"getjobs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "704"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c0-0F73RL3ID4jsVolf5A7z1i76d/0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 11 Dec 2021 22:16:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Success\": true,\n    \"Created\": true,\n    \"result\": [\n        {\n            \"_id\": \"61b517f24f2078c6f7f78887\",\n            \"title\": \"Name\",\n            \"description\": \"Description\",\n            \"depertment\": \"IT\",\n            \"skillset\": \"C++,JAVA, PHP, PYTHON\",\n            \"musthave\": \"C++,JAVA\",\n            \"recruter\": \"Annon\",\n            \"status\": \"OPEN\",\n            \"expire\": \"11/12/2021\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"61b51ae9facc2018b891cad3\",\n            \"title\": \"Senreysa\",\n            \"description\": \"Description\",\n            \"depertment\": \"IT\",\n            \"skillset\": \"Eng,JAVA, PHP, PYTHON\",\n            \"musthave\": \"C++,JAVA\",\n            \"recruter\": \"Annon\",\n            \"status\": \"OPEN\",\n            \"expire\": \"11/12/2021\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"61b5226f8ef4e9ee3d17d0a9\",\n            \"title\": \"Senreysa\",\n            \"description\": \"Description\",\n            \"depertment\": \"IT\",\n            \"skillset\": \"Eng,JAVA, PHP, PYTHON\",\n            \"musthave\": \"C++,JAVA\",\n            \"recruter\": \"Annon\",\n            \"status\": \"OPEN\",\n            \"expire\": \"11/12/2021\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
